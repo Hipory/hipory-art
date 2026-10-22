@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hipory.Art — Illustration Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Page transition overlay -->
+  <div class="page-transition-overlay active" id="pageTransition"></div>
+
+  <!-- ───────── NAVBAR ───────── -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="logo">Hipory<span>.Art</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Featured</a></li>
+      <li><a href="works.html" class="transition-link">All Works</a></li>
+      <li><a href="#services">Services</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+      <a href="https://x.com/Hipory127XD" target="_blank" rel="noopener noreferrer" class="btn-hire">Hire Me</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul>
+      <li><a href="#about" class="drawer-link">About</a></li>
+      <li><a href="#portfolio" class="drawer-link">Featured</a></li>
+      <li><a href="works.html" class="drawer-link transition-link">All Works</a></li>
+      <li><a href="#services" class="drawer-link">Services</a></li>
+    </ul>
+  </div>
+
+  <!-- ───────── HERO ───────── -->
+  <section class="hero" id="hero">
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-blob blob-3"></div>
+    <div class="hero-content reveal">
+      <p class="hero-tag">✦ Illustration Portfolio</p>
+      <h1 class="hero-title">
+        Hi, I'm <span class="gradient-text">Hipory</span><br />
+        I draw worlds<br />
+        <span class="hero-typewriter" id="typewriter"></span>
+      </h1>
+      <p class="hero-sub">
+        Colorful, expressive, story-driven illustrations that breathe life into your ideas.
+      </p>
+      <div class="hero-cta">
+        <a href="#portfolio" class="btn-primary">See My Work ↓</a>
+        <a href="#services" class="btn-outline">Commission Me</a>
+      </div>
+    </div>
+    <div class="hero-art reveal">
+      <div class="hero-img-frame">
+        <img src="assets/hero.png" alt="Hipory.Art Hero Illustration" onerror="this.src='https://placehold.co/480x560/ffb3c6/7c3aed?text=Hipory.Art'" />
+        <div class="frame-badge">✦ Available for commissions</div>
+      </div>
+    </div>
+    <div class="scroll-hint">scroll ↓</div>
+  </section>
+
+  <!-- ───────── ABOUT ───────── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap reveal">
+          <div class="about-img-outer">
+            <img src="assets/about.png" alt="Hipory.Art portrait — Houshou Marine (Swimsuit Outfit)" />
+          </div>
+          <div class="about-sticker sticker-1">🎨</div>
+          <div class="about-sticker sticker-2">✨</div>
+          <div class="about-sticker sticker-3">🌸</div>
+        </div>
+        <div class="about-text reveal">
+          <p class="section-tag">✦ About Me</p>
+          <h2>The Artist<br /><span class="gradient-text">Behind the Brush</span></h2>
+          <p>
+            Hey there! I'm <strong>Hipory</strong> — an illustrator with a deep love for vibrant colors,
+            whimsical characters, and stories told through art. Every piece I create is a little world
+            waiting to be explored.
+          </p>
+          <p>
+            Whether it's a cozy scene, a bold character, or a dreamy landscape — I bring imagination
+            to life with expressive strokes and a whole lot of heart. ✨
+          </p>
+          <div class="about-tags">
+            <span>Character Design</span>
+            <span>Children's Books</span>
+            <span>Editorial Art</span>
+            <span>Brand Illustration</span>
+            <span>Stickers &amp; Merch</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── PORTFOLIO ───────── -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">✦ My Work</p>
+        <h2>The <span class="gradient-text">Gallery</span></h2>
+        <p class="section-sub">Scroll through a selection of my favourite pieces.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="original">Original Art</button>
+        <button class="filter-btn" data-filter="commission">Commissions</button>
+        <button class="filter-btn" data-filter="hololive">Hololive</button>
+        <button class="filter-btn" data-filter="nikke">Nikke</button>
+        <button class="filter-btn" data-filter="fanart">Fan Art</button>
+      </div>
+
+      <!-- Gallery -->
+      <div class="gallery" id="gallery">
+
+        <article class="gallery-item reveal" data-cat="original">
+          <div class="gallery-img-wrap">
+            <img src="assets/work-6.png" alt="Holiday Warmth (Christmas) — Original Art" loading="lazy" />
+            <div class="gallery-overlay">
+              <button class="lightbox-btn" data-src="assets/work-6.png" data-img="assets/work-6.png" data-title="Holiday Warmth (Christmas) — Original Art">🔍 View</button>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-cat">Original Art</span>
+            <h3>Holiday Warmth (Christmas)</h3>
+            <p>A cozy, heartwarming festive holiday illustration — glowing golden eyes, Christmas lights, and colorful gift boxes.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item reveal" data-cat="original">
+          <div class="gallery-img-wrap">
+            <img src="assets/work-14.jpg" alt="Autumn Solitude — Original Character" loading="lazy" />
+            <div class="gallery-overlay">
+              <button class="lightbox-btn" data-src="assets/work-14.jpg" data-img="assets/work-14.jpg" data-title="Autumn Solitude — Original Character">🔍 View</button>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-cat">Original Art</span>
+            <h3>Autumn Solitude</h3>
+            <p>A red-haired warrior maiden in armor taking a peaceful moment of rest among ruins overlooking an abandoned village.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item reveal" data-cat="commission original">
+          <div class="gallery-img-wrap">
+            <img src="assets/work-15.png" alt="Nimenation Persona — Client Request" loading="lazy" />
+            <div class="gallery-overlay">
+              <button class="lightbox-btn" data-src="assets/work-15.png" data-img="assets/work-15.png" data-title="Nimenation Persona — Client Request">🔍 View</button>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-cat">Client Commission</span>
+            <h3>Nimenation Persona</h3>
+            <p>Custom anime persona duo created upon request by client Nimenation, waving brightly beneath an open blue sky.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item reveal" data-cat="hololive fanart">
+          <div class="gallery-img-wrap">
+            <img src="assets/work-19.png" alt="Oozora Subaru — Hololive Fanart" loading="lazy" />
+            <div class="gallery-overlay">
+              <button class="lightbox-btn" data-src="assets/work-19.png" data-img="assets/work-19.png" data-title="Oozora Subaru — Hololive Fanart">🔍 View</button>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-cat">Hololive • Fan Art</span>
+            <h3>Oozora Subaru</h3>
+            <p>Hololive's sunshine idol Oozora Subaru enjoying a sunny afternoon sitting relaxed by the waterfront with a bright smile.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item reveal" data-cat="nikke anime fanart">
+          <div class="gallery-img-wrap">
+            <img src="assets/work-25.png" alt="Sin (Bunny Suit) — Goddess of Victory Nikke Fanart" loading="lazy" />
+            <div class="gallery-overlay">
+              <button class="lightbox-btn" data-src="assets/work-25.png" data-img="assets/work-25.png" data-title="Sin (Bunny Suit) — Goddess of Victory: Nikke">🔍 View</button>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <span class="gallery-cat">Nikke • Fan Art</span>
+            <h3>Sin (Bunny Suit)</h3>
+            <p>Guilty masked Nikke Sin rocking a sleek purple cybernetic bunny suit with playful attitude and bold graphic flair.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- View More Works Button -->
+      <div class="view-more-wrap reveal">
+        <a href="works.html" class="btn-view-more transition-link">
+          <span>Explore All Works (Full Archive)</span>
+          <span class="arrow-circle">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── SERVICES ───────── -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">✦ Services</p>
+        <h2>Let's Create <span class="gradient-text">Together</span></h2>
+        <p class="section-sub">Here's what I can make for you. Commissions are currently open!</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <h3>Character Design</h3>
+          <p>Fully realised original characters — from concept sketches to final polished illustrations.</p>
+          <ul>
+            <li>OC full body</li>
+            <li>Character sheet</li>
+            <li>Multiple expressions</li>
+          </ul>
+          <a href="https://x.com/Hipory127XD" target="_blank" rel="noopener noreferrer" class="btn-service">DM for Quote</a>
+        </div>
+
+        <div class="service-card reveal featured-card">
+          <div class="card-badge">✦ Most Popular</div>
+          <h3>Illustration &amp; Scenes</h3>
+          <p>Story-driven scene illustrations for books, games, brands, or personal projects.</p>
+          <ul>
+            <li>Book covers &amp; interiors</li>
+            <li>Game concepts &amp; assets</li>
+            <li>Album &amp; event art</li>
+          </ul>
+          <a href="https://x.com/Hipory127XD" target="_blank" rel="noopener noreferrer" class="btn-service">DM for Quote</a>
+        </div>
+
+        <div class="service-card reveal">
+          <h3>Brand &amp; Merch Art</h3>
+          <p>Custom illustrations for brands, sticker packs, merch drops, and social media.</p>
+          <ul>
+            <li>Sticker pack design</li>
+            <li>Mascot &amp; brand character</li>
+            <li>Social media assets</li>
+          </ul>
+          <a href="https://x.com/Hipory127XD" target="_blank" rel="noopener noreferrer" class="btn-service">DM for Quote</a>
+        </div>
+
+      </div>
+
+      <!-- Contact strip -->
+      <div class="contact-strip reveal">
+        <div>
+          <h3>Ready to start? Let's talk! 💌</h3>
+          <p>Reach out through direct message or find me on my art socials.</p>
+        </div>
+        <div class="social-links">
+          <a href="https://x.com/Hipory127XD" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter" class="social-btn">𝕏 Twitter / X</a>
+          <a href="https://www.pixiv.net/en/users/104393952" target="_blank" rel="noopener noreferrer" aria-label="Pixiv" class="social-btn">🎨 Pixiv</a>
+          <a href="https://www.instagram.com/hipory.art/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-btn">📷 Instagram</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ───────── FOOTER ───────── -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-logo">Hipory<span>.Art</span></p>
+      <p class="footer-copy">© 2026 Hipory.Art — Made with 💜 and lots of color.</p>
+    </div>
+  </footer>
+
+  <!-- ───────── BACK TO TOP ───────── -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- ───────── LIGHTBOX ───────── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <div class="lightbox-inner">
+      <img id="lightboxImg" src="" alt="" />
+      <p id="lightboxTitle"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
